@@ -10,7 +10,7 @@
     
     
     
-    <title>404 | jason yang</title>
+    <title>Node | jason yang</title>
     <link href="”http://yoursite.com“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -136,10 +136,149 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://yoursite.com">jason yang</a>
+        >
+        <span>Node</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2018/12/24/Node/">Node</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-12-24
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2018/12/24/Node/">Node</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-12-24
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="Node是什么？"><a href="#Node是什么？" class="headerlink" title="Node是什么？"></a>Node是什么？</h2><h3 id="Node-js-是一个基于-Chrome-V8-引擎的-JavaScript-运行环境。"><a href="#Node-js-是一个基于-Chrome-V8-引擎的-JavaScript-运行环境。" class="headerlink" title="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。"></a>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</h3><p><em>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</em></p>
+<hr>
+<h3 id="Node下载"><a href="#Node下载" class="headerlink" title="Node下载"></a>Node下载</h3><h6 id="npm-install-包名-–下载某包"><a href="#npm-install-包名-–下载某包" class="headerlink" title="npm install 包名   –下载某包"></a>npm install 包名   –下载某包</h6><h6 id="npm-install-包名-g-global-进行全局安装包"><a href="#npm-install-包名-g-global-进行全局安装包" class="headerlink" title="npm install 包名  -g(global) 进行全局安装包"></a>npm install 包名  -g(global) 进行全局安装包</h6><h6 id="package-json-包管理文件"><a href="#package-json-包管理文件" class="headerlink" title="package,json  包管理文件"></a>package,json  包管理文件</h6><h6 id="npm-root-g-查看npm全局路径"><a href="#npm-root-g-查看npm全局路径" class="headerlink" title="npm root -g 查看npm全局路径"></a>npm root -g 查看npm全局路径</h6><h6 id="npm-uninstall-包名-卸载npm包"><a href="#npm-uninstall-包名-卸载npm包" class="headerlink" title="npm uninstall 包名  卸载npm包"></a>npm uninstall 包名  卸载npm包</h6><hr>
+<h3 id="FS模块"><a href="#FS模块" class="headerlink" title="FS模块"></a>FS模块</h3><ul>
+<li>写入文件——fs.writeFileSync(‘路径’,’写入内容’)</li>
+<li>追加文件——fs.appendFileSync(‘路径’,’写入内容’)  </li>
+<li><p>写入数据——fs.writeFileSync(‘路径’,’写入数据’)  </p>
+</li>
+<li><p>判断文件夹是否存在——fs.exists(文件/文件夹，function(exist){})</p>
+</li>
+<li>查看文件信息——fs.stat(‘文件/文件夹’，function(err,st){err是报错信息,st是文件})</li>
+<li>判断是否为文件——fs.isFeile()</li>
+<li>判断是否为文件夹——fs.Directory()</li>
+<li>可续流——fs.ReadStam()</li>
+<li>可写流——fs.writeStream(‘路径’,(需要写的文件))</li>
+<li>监听只读数据流——on(‘data’,function(chunk){监听只都数据流})</li>
+<li>读取结束事件——on(‘end’,function(){读取结束事件})</li>
+<li>可写流——writeStream(‘路径’,(要写文件))</li>
+<li>写入目标——ws.write(chunk)</li>
+<li>ws.end()(只触发一次)</li>
+</ul>
+<hr>
+<h4 id="Path模块"><a href="#Path模块" class="headerlink" title="Path模块"></a>Path模块</h4><ul>
+<li>path.normalize(路径) 格式化路径</li>
+<li>path.extname(路径) 获取文件后缀名</li>
+<li>path.dirname() 返回代表文件夹部分</li>
+<li>path.resolve() 将一系列路径变为绝对路径</li>
+<li>path.relative() 返回相对路径</li>
+<li>path.format() 转为字符串</li>
+<li>path.delimiter() 提供特定平台的路径分隔符</li>
+<li>path.join(路径,[ext]) 连接路径</li>
+<li>path.basename() 确定是否为绝对路径</li>
+<li>path.isAbsolute() 确定是否为绝对路径</li>
+<li>path.parse() 转换为路径</li>
+</ul>
+<hr>
+<h4 id="Buffer方法"><a href="#Buffer方法" class="headerlink" title="Buffer方法"></a>Buffer方法</h4><ul>
+<li>Buffer.concat([buf1],[buf2])  拼接buffer</li>
+<li>new Buffer/Buffer.from(‘’)   生成Buffer</li>
+</ul>
+<hr>
+<h4 id="Http模块"><a href="#Http模块" class="headerlink" title="Http模块"></a>Http模块</h4><blockquote>
+<p>request 请求体对象<br>response 响应体对象</p>
+<ul>
+<li>http.createServer(callback)  搭建服务器</li>
+<li>response.writeHead(状态码,[opt])  设置响应头信息</li>
+<li>response.write(‘con’)  设置响应体内容</li>
+<li>response.end()  结束响应(str/buffer)</li>
+<li>server.listen(port,[callback])  监听端口号<blockquote>
+<p>request.url  请求路径<br>request.method 请求方法<br>content-Type  解析数据</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="转换方式"><a href="#转换方式" class="headerlink" title="转换方式"></a>转换方式</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>转换对象</th>
+<th>转换字符串</th>
+<th>适用场景 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> path</td>
+<td>parse</td>
+<td>format</td>
+<td>适用于磁盘路径</td>
+</tr>
+<tr>
+<td> url</td>
+<td>parse</td>
+<td>format</td>
+<td>操作地址栏</td>
+</tr>
+<tr>
+<td> querystring</td>
+<td>parse</td>
+<td>stringify</td>
+<td>操作地址栏(后半部分)</td>
+</tr>
+<tr>
+<td> json</td>
+<td>parse</td>
+<td>stringify</td>
+<td>操作json数据</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>aaurl.parse(url,true)  转换对象<br>querystring.stringify(obj,[&amp;],[=])  转换为字符串<br>querystring.parse(str,[&amp;],[=])  转换为对象</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
-<!-- 404 自定义页面 -->
-<!-- 有其他想自定义的page在这里添加判断条件, 并且写好对应的模板渲染文件 -->
+    </div>
+</article>
+
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -278,13 +417,13 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/404/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/12/24/Node/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/404/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/12/24/Node/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/404/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/12/24/Node/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
