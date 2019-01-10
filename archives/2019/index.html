@@ -10,7 +10,7 @@
     
     
     
-    <title>Promise | jason yang</title>
+    <title>archive_a | jason yang</title>
     <link href="”http://yoursite.com“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -93,7 +93,7 @@
                 
                 
                 
-                <li class="">
+                <li class="current">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -136,27 +136,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
+                    <article class="article well article-body" id="article-archive">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://yoursite.com">jason yang</a>
         >
-        <span>Promise</span>
+        <span>归档</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/12/20/Promise/">Promise</a>
+                <a href="/archives">归档</a>
             </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-12-20
-            </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -164,54 +156,56 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/12/20/Promise/">Promise</a>
+                    <a href="/archives">归档</a>
                 </h4>
             </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2018-12-20
-            </p>
-            <p>
-                
-                
-            </p>
         </center>
     </div>
-    <div class="content-article">
-        <h2 id="Promise-是异步编程的一种解决方案-从语法上讲，promise是一个对象，从它可以获取异步操作的消息。"><a href="#Promise-是异步编程的一种解决方案-从语法上讲，promise是一个对象，从它可以获取异步操作的消息。" class="headerlink" title="Promise 是异步编程的一种解决方案: 从语法上讲，promise是一个对象，从它可以获取异步操作的消息。"></a>Promise 是异步编程的一种解决方案: 从语法上讲，promise是一个对象，从它可以获取异步操作的消息。</h2><h3 id="有三种状态-pending-等待态-，fulfiled-成功态-，rejected-失败态-；状态一旦改变，就不会再变。创造promise实例后，它会立即执行。"><a href="#有三种状态-pending-等待态-，fulfiled-成功态-，rejected-失败态-；状态一旦改变，就不会再变。创造promise实例后，它会立即执行。" class="headerlink" title="有三种状态:pending(等待态)，fulfiled(成功态)，rejected(失败态)；状态一旦改变，就不会再变。创造promise实例后，它会立即执行。"></a>有三种状态:pending(等待态)，fulfiled(成功态)，rejected(失败态)；状态一旦改变，就不会再变。创造promise实例后，它会立即执行。</h3><h4 id="promise是用来解决两个问题的"><a href="#promise是用来解决两个问题的" class="headerlink" title="promise是用来解决两个问题的:"></a>promise是用来解决两个问题的:</h4><ul>
-<li>回调地狱，代码难以维护， 常常第一个的函数的输出是第二个函数的输入这种现象</li>
-<li>promise可以支持多个并发的请求，获取并发请求中的数据</li>
-<li>这个promise可以解决异步的问题，本身不能说promise是异步的</li>
-</ul>
-<h3 id="Promise是一个构造函数，自己身上有all、reject、resolve这几个眼熟的方法，原型上有then、catch等同样很眼熟的方法。"><a href="#Promise是一个构造函数，自己身上有all、reject、resolve这几个眼熟的方法，原型上有then、catch等同样很眼熟的方法。" class="headerlink" title="Promise是一个构造函数，自己身上有all、reject、resolve这几个眼熟的方法，原型上有then、catch等同样很眼熟的方法。"></a>Promise是一个构造函数，自己身上有all、reject、resolve这几个眼熟的方法，原型上有then、catch等同样很眼熟的方法。</h3><blockquote>
-<p>Promise的构造函数接收一个参数:函数，并且这个函数需要传入两个参数:</p>
-<ul>
-<li>resolve :异步操作执行成功后的回调函数</li>
-<li>reject:异步操作执行失败后的回调函数</li>
-</ul>
-</blockquote>
-<h3 id="reject的用法"><a href="#reject的用法" class="headerlink" title="reject的用法:"></a>reject的用法:</h3><blockquote>
-<p>把Promise的状态置为rejected，这样我们在then中就能捕捉到，然后执行“失败”情况的回调。</p>
-</blockquote>
-<h3 id="all的用法"><a href="#all的用法" class="headerlink" title="all的用法:"></a>all的用法:</h3><blockquote>
-<p>谁跑的慢，以谁为准执行回调。all接收一个数组参数，里面的值最终都算返回Promise对象</p>
-</blockquote>
-<h3 id="then-链式操作的用法"><a href="#then-链式操作的用法" class="headerlink" title="then 链式操作的用法"></a>then 链式操作的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">promise.then((data) =&gt; &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;)</span><br><span class="line">.then((data) =&gt; &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;)</span><br><span class="line">.then((data) =&gt; &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>方法总结:</p>
-<ul>
-<li>捕获错误的方法 catch()</li>
-<li>解析全部方法 all()</li>
-<li>竞赛 race()</li>
-<li>生成一个成功的promise  resolve()</li>
-<li>生成一个失败的promise  reject()</li>
-</ul>
-</blockquote>
-
+    <div class="content-article" style="margin-top: 30px;">
+        
+        
+            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
+            
+        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+            
+             
+             
+                        <a href="/2019/01/10/Analysis/">Analysis</a>
+                        <br>
+            
+             
+                        </div>
+                    <h1 style="font-size: 24px; margin-top: 40px;">2018年</h1>
+                    <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+                 
+             
+                        <a href="/2018/12/26/linux/">Linux</a>
+                        <br>
+            
+             
+                        <a href="/2018/12/24/Node/">Node</a>
+                        <br>
+            
+             
+                        <a href="/2018/12/21/Git/">Git</a>
+                        <br>
+            
+             
+                        <a href="/2018/12/20/Promise/">Promise</a>
+                        <br>
+            
+             
+                        <a href="/2018/12/19/VueJs/">Vue.js快速入门</a>
+                        <br>
+            
+             
+                        <a href="/2018/12/18/MarkDown/">Markdown语法格式</a>
+                        <br>
+            
+                    </div>
+        
     </div>
 </article>
-
-
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -373,13 +367,13 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/12/20/Promise/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/archives/2019/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/12/20/Promise/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/archives/2019/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/12/20/Promise/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/archives/2019/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
