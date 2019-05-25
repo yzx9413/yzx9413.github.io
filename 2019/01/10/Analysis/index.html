@@ -203,11 +203,8 @@
 <li>为了解决问题1，Vuejs扩展了观察数组，为它添加一个$set()方法：</li>
 </ul>
 <blockquote>
-<p>与 <code>example1.items[0] = ...</code> 相同，但是能触发视图更新 <code>example1.items.$set(0, { childMsg: &#39;Changed!&#39;})</code></p>
+<p>与 <code>example1.items[0] = ...</code> 相同，但是能触发视图更新 <code>example1.items.$set(0, { childMsg: &#39;Changed!&#39;})</code>问题2，需要一个空数组替换items。</p>
 </blockquote>
-<ul>
-<li>问题2，需要一个空数组替换items。</li>
-</ul>
 <ul>
 <li><p>除了$set()，vuejs也为观察数组添加了$remove()方法，用于从目标数组中查找并删除元素，在内部调用了splice()。因此，不必：</p>
 <p><code>var index = this.items.indexOf(item)
@@ -330,6 +327,12 @@ var vm = new Vue({
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2019/05/25/wechat/">小程序知识点总结</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2019/01/10/Analysis/">Analysis</a>
                 </span>
             </li>
@@ -412,7 +415,13 @@ var vm = new Vue({
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/12/20/Promise/">Promise</a>
+                    <a href="/2018/12/26/linux/">Linux</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/25/wechat/">小程序知识点总结</a>
                 </span>
             </li>
             
@@ -424,7 +433,7 @@ var vm = new Vue({
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/12/26/linux/">Linux</a>
+                    <a href="/2018/12/20/Promise/">Promise</a>
                 </span>
             </li>
             
