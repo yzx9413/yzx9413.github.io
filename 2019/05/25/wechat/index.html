@@ -217,7 +217,7 @@
 <h4 id="图片上传功能"><a href="#图片上传功能" class="headerlink" title="图片上传功能"></a>图片上传功能</h4><blockquote>
 <p>本地选择一张图,生成临时路径,进行上传</p>
 <blockquote>
-<p>小程序因为自身限制,每次只能上传一张图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//选择本地图片</span><br><span class="line">wx.chooseImage(&#123;</span><br><span class="line">    count: 1,   //</span><br><span class="line">    sizeType: [&apos;original&apos;, &apos;compressed&apos;], //所选的图片的尺寸</span><br><span class="line">    sourceType: [&apos;album&apos;, &apos;camera&apos;],    //选择图片的来源</span><br><span class="line">    success(res) &#123;</span><br><span class="line">        //获取图片地址并且更改页面图片</span><br><span class="line">        var tempFilePaths = res.tempFiles[0].path;</span><br><span class="line">        that.imgSrc = tempFilePaths;</span><br><span class="line">        //选择图片进行上传</span><br><span class="line">        wx.uploadFile(&#123;</span><br><span class="line">            url: &quot;服务器地址&quot;,</span><br><span class="line">            filePath: tempFilePaths,</span><br><span class="line">            name: &quot;文件名称&quot;,</span><br><span class="line">            header: &#123;</span><br><span class="line">                &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,</span><br><span class="line">                accept: &quot;application/json&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            fomData: &#123;&#125;,</span><br><span class="line">            success(res) &#123;</span><br><span class="line">                console.log(&quot;上传完成&quot;,res);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>小程序因为自身限制,每次只能上传一张图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//选择本地图片</span><br><span class="line">wx.chooseImage(&#123;</span><br><span class="line">    count: 1,   //最多可以选择的文件个数，可以 0～100</span><br><span class="line">    sizeType: [&apos;original&apos;, &apos;compressed&apos;], //所选的图片的尺寸</span><br><span class="line">    sourceType: [&apos;album&apos;, &apos;camera&apos;],    //选择图片的来源</span><br><span class="line">    success(res) &#123;</span><br><span class="line">        //获取图片地址并且更改页面图片</span><br><span class="line">        var tempFilePaths = res.tempFiles[0].path;</span><br><span class="line">        that.imgSrc = tempFilePaths;</span><br><span class="line">        //选择图片进行上传</span><br><span class="line">        wx.uploadFile(&#123;</span><br><span class="line">            url: &quot;服务器地址&quot;,</span><br><span class="line">            filePath: tempFilePaths,</span><br><span class="line">            name: &quot;文件名称&quot;,</span><br><span class="line">            header: &#123;</span><br><span class="line">                &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,</span><br><span class="line">                accept: &quot;application/json&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            fomData: &#123;&#125;,</span><br><span class="line">            success(res) &#123;</span><br><span class="line">                console.log(&quot;上传完成&quot;,res);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 </blockquote>
 <hr>
@@ -350,13 +350,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/12/24/Node/">Node</a>
+                    <a href="/2018/12/21/Git/">Git</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/12/18/MarkDown/">Markdown语法格式</a>
+                    <a href="/2018/12/24/Node/">Node</a>
                 </span>
             </li>
             
@@ -380,7 +380,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/12/21/Git/">Git</a>
+                    <a href="/2018/12/18/MarkDown/">Markdown语法格式</a>
                 </span>
             </li>
             
